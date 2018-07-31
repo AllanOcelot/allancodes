@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css" />
 </head>
 <body>
     <header>
@@ -41,6 +42,15 @@
                 </div>
                 <div class="col-md-8 d-none d-lg-block d-xs-block d-sm-none d-xs-none">
                     <img src="./assets/images/about.png"  alt="Me, at the most Westerly point in Europe.">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="calendar">
+                        <!-- Loading stuff -->
+                        Loading my github data... please wait...
+                    </div>
                 </div>
             </div>
         </div>
@@ -83,6 +93,11 @@
     <div class="next-stream-banner">
         <p><i class="fab fa-twitch"></i> <b>Next Stream:</b> To be announced.</p>
     </div>
+
+    <script src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js"></script>
+    <script>
+        new GitHubCalendar(".calendar", "allanOcelot");
+    </script>
 
 </body>
 </html>
