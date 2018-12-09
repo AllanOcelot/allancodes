@@ -1,0 +1,231 @@
+html {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+img {
+  max-width: 100%;
+}
+body {
+  background: #f7f7f7;
+}
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+header a {
+  display: inline-block;
+  font-weight: 900;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 10px 0;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+header a:hover {
+  color: #fff;
+  opacity: 1;
+}
+@media screen and (max-width: 1000px) {
+  header {
+    text-align: center;
+  }
+}
+.intro-unit {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  background-color: #2f3e4f;
+  min-height: 400px;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  /* align horizontal */
+  align-items: center;
+  background-image: url('/assets/images/intro-image.png');
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
+@media screen and (max-width: 1000px) {
+  .intro-unit {
+    min-height: 100vh;
+    background-image: none;
+  }
+}
+.intro-unit .into-text {
+  max-width: 500px;
+  color: #fff;
+}
+@media screen and (max-width: 1000px) {
+  .intro-unit .into-text {
+    padding: 0 20px;
+  }
+}
+.intro-unit .into-text h1 {
+  font-weight: light;
+  font-size: 40px;
+  margin: 0 0 20px 0;
+}
+@media screen and (max-width: 1000px) {
+  .intro-unit .into-text h1 {
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+}
+.intro-unit .into-text p {
+  margin: 0 0 20px 0;
+  font-weight: regular;
+  line-height: 30px;
+}
+.intro-unit .into-text .button {
+  display: inline-block;
+  width: auto;
+  padding: 10px 20px;
+  text-align: center;
+  color: #fff;
+  margin: 0 10px;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+.intro-unit .into-text .button i {
+  margin-right: 15px;
+  font-size: 1.2em;
+}
+.intro-unit .into-text .button:hover {
+  transition: background 0.1s;
+}
+@media screen and (max-width: 1000px) {
+  .intro-unit .into-text .button {
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+}
+.intro-unit .into-text .button.twitch {
+  background: #6441a4;
+}
+.intro-unit .into-text .button.twitch:hover {
+  background: #805cc1;
+}
+.intro-unit .into-text .button.github {
+  background: #24292e;
+}
+.intro-unit .into-text .button.github:hover {
+  background: #4d5258;
+}
+.next-stream-banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px 0;
+}
+.about-me, .projects {
+  width: 100%;
+  padding: 60px;
+}
+.about-me h1, .projects h1, .about-me h2, .projects h2 {
+  font-size: 30px;
+  margin: 0 0 20px 0;
+}
+.about-me p, .projects p {
+  margin: 0 0 20px 0;
+  font-size: 1.2em;
+}
+@media screen and (max-width: 1100px) {
+  .about-me, .projects {
+    text-align: center;
+  }
+}
+.calendar {
+  margin: 40px auto 0 auto;
+}
+.projects {
+  text-align: center;
+  background-color: #2b3948;
+  color: #fff;
+  padding-bottom: 80px;
+}
+.projects .project-block {
+  border: 1px solid #fff;
+  border-radius: 4px solid #fff;
+  margin-top: 20px;
+  transition: all 0.3s;
+}
+.projects .project-block p.title {
+  line-height: 40px;
+  font-weight: 600;
+  background-color: #fff;
+  width: 100%;
+  color: #2b3948;
+  cursor: default;
+}
+.projects .project-block p {
+  font-size: 15px;
+  line-height: 25px;
+  padding: 0 20px;
+  cursor: default;
+}
+.projects .project-block a {
+  color: #fff;
+  text-decoration: underline;
+  line-height: 30px;
+  margin-bottom: 20px;
+  display: inline-block;
+  padding-left: 35px;
+  position: relative;
+}
+.projects .project-block a i {
+  position: absolute;
+  font-size: 1.6em;
+  left: 0;
+  top: 3px;
+}
+.projects .project-block:hover {
+  background: #fff;
+}
+.projects .project-block:hover p {
+  color: #2b3948;
+}
+.projects .project-block:hover a {
+  color: #2b3948;
+}
+
+.blog-introduction-title {
+    display: block;
+    color: #fff;
+    min-height: 30vh;
+    padding: 150px 0 100px 0;
+    text-align: center;
+    background: #2f3e4f;
+    font-weight: normal;
+}
+
+.blog-introduction-title h1 {
+    font-size: 2.5em;
+    font-weight: 100;
+    margin: 0 0 5px 0;
+}
+
+.blog-introduction-title p {
+    margin: 0;
+}
