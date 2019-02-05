@@ -9,6 +9,11 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css" />
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
 </head>
 <body>
     <header>
@@ -32,13 +37,41 @@
         </div>
     </div>
 
+    <div class="blog-main-container">
+        <div class="blog-posts">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12" id="blog-posts-container">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="next-stream-banner">
         <p><i class="fab fa-twitch"></i> <b>Next Stream:</b> To be announced.</p>
     </div>
 
-    <script src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js"></script>
-    <script>
-        new GitHubCalendar(".calendar", "allanOcelot");
+    <script type="text/javascript">
+    $.ajax({
+        method: "GET", url: "connect.php",
+        }).done(function( data ) {
+        var result = $.parseJSON(data);
+        var string = '';
+
+        //from result create a string of data and append to the div
+        $.each( result, function( key, value ) {
+            string += "<div class='blog-post'>" +
+            "<h2>"+ value['Title'] + "<span>Created:" + value['Created'] + "</h2>" +
+                "<div class='blog-content'>" + value['Content']+ "</div>" +
+            "</div>";
+        });
+
+
+
+    $("#blog-posts-container").html(string);
+    });
     </script>
 
 </body>
