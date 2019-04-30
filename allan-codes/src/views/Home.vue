@@ -4,9 +4,10 @@
         <div class="intro-unit">
             <div class="into-text">
                 <h1>My name is Allan</h1>
-                <p>I’m a full stack web developer and frontend designer who loves to  contribute to open source projects and build web apps. </p>
-                <a href="https://www.twitch.tv/allancodes" class="button twitch" title="Find me on Twitch"><i class="fab fa-twitch"></i> Find me on Twitch</a>
+                <p>I’m a full stack web developer and frontend designer. </br>
+                   I have a passion for Open Source projects and all things <b>Space Related</b>.</p>
                 <a href="https://www.github.com/allanocelot" class="button github" title="Find me on Github"><i class="fab fa-github-square"></i>Find me on Github</a>
+                <a href="https://www.twitch.tv/allancodes" class="button twitch" title="Find me on Twitch"><i class="fab fa-twitch"></i> Find me on Twitch</a>
             </div>
         </div>
 
@@ -47,9 +48,9 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-12">
                         <div class="project-block">
-                            <p class="title">Tournament Tool</p>
-                            <p>A tool for creating and managing online esports tournamnets, There is a clear lack of an open source tool and Tournamnt Tool hope to fill that void!</p>
-                            <a href="https://github.com/AllanOcelot/tournament-tool" target="_blank"><i class="fab fa-github-square"></i>View on Github</a>
+                            <p class="title">Runescape Goals</p>
+                            <p>A fun VUE JS tool for generating tasks for Runescape players! </br> The aim is to intergrate the backend with RuneLite in future!</p>
+                            <a href="https://github.com/AllanOcelot/Runescape-Goals" target="_blank"><i class="fab fa-github-square"></i>View on Github</a>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12">
@@ -69,20 +70,19 @@
                 </div>
             </div>
         </div>
-
-        <div class="next-stream-banner">
-            <p><i class="fab fa-twitch"></i> <b>Next Stream:</b> To be announced.</p>
-        </div>
+        <footerComponent />
     </div>
 </template>
 <script>
-import headerComponent from '../includes/header.vue';
+import headerComponent from '../components/includes/header.vue';
+import footerComponent from '../components/includes/footer.vue';
 import GitHubCalendar from 'github-calendar';
 
 export default {
     name: 'homePage',
     components: {
-        headerComponent
+        headerComponent,
+        footerComponent
     },
     mounted: function() {
         new GitHubCalendar(".calendar", "allanOcelot", {responsive: true});
